@@ -10,9 +10,9 @@ class SimpleInterest {
         System.out.print("Enter the rate : ");
         r = scan.nextFloat();
         System.out.print("Enter the time : ");
-        t=scan.nextFloat();
-        sp=(p*r*t)/100;
+        t = scan.nextFloat();
+        sp = (p * r * t) / 100;
         scan.close();
-        System.out.println("Simple interest is : "+sp);
+        System.out.println("Simple interest is : " + sp);
     }
 }
