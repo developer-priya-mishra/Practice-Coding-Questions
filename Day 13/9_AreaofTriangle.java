@@ -15,9 +15,9 @@ class AreaofTriangle {
 
         float s = (side1 + side2 + side3) / 2;
 
-        double areaofTriangle = s * (s - side1) * (s - side2) * (s - side3);
-        System.out.println(areaofTriangle);
-        System.out.format("Area of triangle is ", Math.pow(areaofTriangle, 1.0 / 2));
+        double result = s * (s - side1) * (s - side2) * (s - side3);
+        double areaofTriangle = Math.pow(result, 1.0 / 2.0);
+        System.out.format("Area of triangle is %.2f", areaofTriangle);
 
         scan.close();
     }
