@@ -8,11 +8,17 @@ class SumofFactorialNumber {
         int num = scan.nextInt();
 
         int sum = 0;
-        for (int i = 1; i <= num; i++) {
-            int factorial = i;
+
+        for (int n = 1; n <= num; n++) {
+            int factorial = 1;
+            for (int i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            // System.out.println(factorial);
             sum += factorial;
         }
-        System.out.println("Sum of factorial of " + num + " is " + sum);
+
+        System.out.println("Sum of factorial of first " + num + " natural numbers is " + sum);
         scan.close();
     }
 }
