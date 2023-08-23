@@ -7,20 +7,20 @@ class ArmStrongNumber {
         System.out.print("Enter the number : ");
         int num = scan.nextInt();
 
-        int count = 0;
-        int quotient = num;
-        int n;
-        double mult = 0;
-
-        for (int i = quotient; i % 10 != 0; i = i / 10) {
-            count = count + 1;
+        // Calculating the number of digits
+        int tempNum = num;
+        int numberOfDigit = 0;
+        for (int i = tempNum; i != 0; i = i / 10) {
+            numberOfDigit = numberOfDigit + 1;
         }
+        System.out.println(numberOfDigit);
 
-        while (quotient % 10 != 0) {
-            n = quotient % 10;
-            double power = Math.pow(n, count);
+        double mult = 0;
+        while (tempNum != 0) {
+            int n = tempNum % 10;
+            double power = Math.pow(n, numberOfDigit);
             mult += power;
-            quotient = quotient / 10;
+            tempNum = tempNum / 10;
         }
 
         if (mult == num) {
