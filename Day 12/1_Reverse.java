@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//1st way to reverse a number
 class Reverse1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -8,9 +9,9 @@ class Reverse1 {
         int num = scan.nextInt();
 
         // int quotient = num;
-
-        while (num % 10 != 0) {
-            int remainder = num % 10;
+        int remainder = 0;
+        while (num != 0) {
+            remainder = num % 10;
             num = num / 10;
             System.out.print(remainder);
         }
@@ -18,6 +19,8 @@ class Reverse1 {
         scan.close();
     }
 }
+
+// 2nd way to reverse a number
 
 class Reverse2 {
     public static void main(String[] args) {
@@ -28,7 +31,7 @@ class Reverse2 {
 
         int reverseNum = 0;
 
-        while (num % 10 != 0) {
+        while (num != 0) {
             int remainder = num % 10;
             reverseNum = (reverseNum * 10) + remainder;
             num = num / 10;
@@ -39,6 +42,7 @@ class Reverse2 {
     }
 }
 
+// 3rd way to reverse a number
 class Reverse3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -48,7 +52,7 @@ class Reverse3 {
 
         int reverseNum = 0;
 
-        while (num % 10 != 0) {
+        while (num != 0) {
             reverseNum = (reverseNum * 10) + num % 10;
             num = num / 10;
         }

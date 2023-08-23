@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class NumberCount {
+class LastDigit {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
