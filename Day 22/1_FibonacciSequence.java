@@ -7,16 +7,16 @@ class FibonacciSequence {
         System.out.print("Enter the term : ");
         int n = scan.nextInt();
 
-        int prev = 0;
-        int curr = 1;
+        int term1 = 0;
+        int term2 = 1;
 
-        System.out.print("Fibonacci Sequence: " + prev + " " + curr);
+        System.out.print("Fibonacci Sequence: " + term1 + " " + term2);
 
         for (int i = 2; i < n; i++) {
-            int next = prev + curr;
-            System.out.print(" " + next);
-            prev = curr;
-            curr = next;
+            int nextTerm = term1 + term2;
+            System.out.print(" " + nextTerm);
+            term1 = term2;
+            term2 = nextTerm;
         }
         scan.close();
     }

@@ -8,16 +8,14 @@ class PalindromeNumber {
         int num = scan.nextInt();
 
         int tempNum = num;
-        int remainder = 0;
-        int reverse = 0;
+        int reverseNum = 0;
         while (tempNum != 0) {
-            remainder = tempNum % 10;
-            reverse = reverse * 10 + remainder;
-            // System.out.print(remainder);
+            int remainder = tempNum % 10;
+            reverseNum = reverseNum * 10 + remainder;
             tempNum = tempNum / 10;
         }
 
-        if (reverse == num) {
+        if (reverseNum == num) {
             System.out.println(num + " is a Palindrome Number");
         } else {
             System.out.println(num + " is not a Palindrome Number");

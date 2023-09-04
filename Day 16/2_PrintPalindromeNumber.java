@@ -12,16 +12,14 @@ class PrintPalindromeNumber {
 
         for (int i = num1; i <= num2; i++) {
             int tempNum = i;
-            int remainder = 0;
-            int reverse = 0;
+            int reverseNum = 0;
             while (tempNum != 0) {
-                remainder = tempNum % 10;
-                reverse = reverse * 10 + remainder;
+                int remainder = tempNum % 10;
+                reverseNum = reverseNum * 10 + remainder;
                 tempNum = tempNum / 10;
             }
-            // System.out.println(reverse);
-            if (reverse == i) {
-                System.out.println(reverse);
+            if (reverseNum == i) {
+                System.out.println(i);
             }
         }
 

@@ -19,7 +19,6 @@ class ArmStrongNumberInIntervals {
                 numberOfDigit = numberOfDigit + 1;
                 tempNum = tempNum / 10;
             }
-            // System.out.println(numberOfDigit);
 
             // Calculating Armstrong number
             tempNum = i;
@@ -31,8 +30,9 @@ class ArmStrongNumberInIntervals {
                 tempNum = tempNum / 10;
             }
 
+            // Checking if it is armstrong no or not
             if (sum == i) {
-                System.out.println(sum);
+                System.out.println(i);
             }
 
         }

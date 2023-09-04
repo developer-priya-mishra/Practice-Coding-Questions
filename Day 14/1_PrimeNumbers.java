@@ -14,10 +14,10 @@ class PrimeNumbers1 {
             }
         }
 
-        if (count > 2) {
-            System.out.println(num + " is not a prime number");
+        if (count == 2) {
+            System.out.println(num + " is  a prime number");
         } else {
-            System.out.println(num + " is prime number");
+            System.out.println(num + " is not a prime number");
         }
         scan.close();
     }

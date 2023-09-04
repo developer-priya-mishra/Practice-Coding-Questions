@@ -10,20 +10,23 @@ class ArmStrongNumber {
         // Calculating the number of digits
         int tempNum = num;
         int numberOfDigit = 0;
-        for (int i = tempNum; i != 0; i = i / 10) {
-            numberOfDigit = numberOfDigit + 1;
-        }
-        System.out.println(numberOfDigit);
-
-        double mult = 0;
         while (tempNum != 0) {
-            int n = tempNum % 10;
-            double power = Math.pow(n, numberOfDigit);
-            mult += power;
+            numberOfDigit = numberOfDigit + 1;
             tempNum = tempNum / 10;
         }
 
-        if (mult == num) {
+        // Calculating Armstrong number
+        tempNum = num;
+        double sum = 0;
+        while (tempNum != 0) {
+            int lastDigit = tempNum % 10;
+            double power = Math.pow(lastDigit, numberOfDigit);
+            sum += power;
+            tempNum = tempNum / 10;
+        }
+
+        // Checking if it is armstrong no or not
+        if (sum == num) {
             System.out.println(num + " is a Armstrong number");
         } else {
             System.out.println(num + " is not a Armstrong number");
