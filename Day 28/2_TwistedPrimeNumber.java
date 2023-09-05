@@ -1,21 +1,14 @@
 import java.util.Scanner;
 
 class TwistedPrimeNumber {
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the number : ");
         int num = scan.nextInt();
 
-        boolean isPrime = true;
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-        if (isPrime) {
+        if (checkPrimeNumber(num)) {
             int reverseNum = 0;
             int tempNum = num;
             while (tempNum != 0) {
@@ -24,14 +17,7 @@ class TwistedPrimeNumber {
                 tempNum = tempNum / 10;
             }
 
-            for (int i = 2; i < reverseNum; i++) {
-                if (reverseNum % i == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
-
-            if (isPrime) {
+            if (checkPrimeNumber(reverseNum)) {
                 System.out.println(num + " is twisted prime number.");
             } else {
                 System.out.println(num + " is not a twisted prime number.");
@@ -43,4 +29,16 @@ class TwistedPrimeNumber {
 
         scan.close();
     }
+
+    static boolean checkPrimeNumber(int number) {
+        boolean isPrime = true;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+
 }
