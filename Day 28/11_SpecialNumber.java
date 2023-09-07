@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-// Special number is a no if the sum of the factorial of the digits in the number is equal to the number itself. 
+// Special number (krishnamurthy number) is a no if the sum of the factorial of the digits in the number is equal to the number itself. 
 
 class SpecialNumber {
     public static void main(String[] args) {

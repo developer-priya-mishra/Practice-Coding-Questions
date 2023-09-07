@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// A number is said to be twisted prime if it is a prime number and reverse of the number is also a prime number. Examples:  97 is a prime number and its reverse 79 is also a prime number.
 class TwistedPrimeNumber {
 
     public static void main(String[] args) {

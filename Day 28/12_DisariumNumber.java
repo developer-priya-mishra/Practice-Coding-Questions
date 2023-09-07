@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// A number is called Disarium if sum of its digits powered with their respective positions is equal to the number itself. Example : 1^1 + 3^2 + 5^3 = 135
 class DisariumNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

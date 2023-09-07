@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// Twin primes are a pair of prime numbers that have a difference of 2 between them. For example, 3 and 5
 class TwinPrimeNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
