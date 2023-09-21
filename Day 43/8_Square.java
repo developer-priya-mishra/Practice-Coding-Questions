@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Square {
+class Square1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -21,6 +21,24 @@ class Square {
             }
         } else {
             System.out.println("Number of columns should be equal to number of rows.");
+        }
+
+        scan.close();
+    }
+}
+
+class Square2 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter the number : ");
+        int num = scan.nextInt();
+
+        for (int row = 1; row <= num; row++) {
+            for (int col = 1; col <= num; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
         }
 
         scan.close();
