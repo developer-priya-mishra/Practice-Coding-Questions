@@ -7,25 +7,24 @@ class FullNumberPyramid1 {
         System.out.print("Enter the number : ");
         int num = scan.nextInt();
 
-        int j = 1;
+        int j = 0;
         int colEnd = num;
         for (int row = num; row >= 1; row--) {
             for (int col = 1; col <= colEnd; col++) {
                 if (row <= col) {
-                    System.out.print(j + "");
                     if (col > num) {
                         j = j - 1;
                     } else {
                         j = j + 1;
                     }
+                    System.out.print(j + " ");
                 } else {
-                    System.out.print("_");
+                    System.out.print("  ");
                 }
             }
             System.out.println();
             colEnd++;
         }
-
         scan.close();
     }
 }
@@ -37,18 +36,18 @@ class FullNumberPyramid2 {
         System.out.print("Enter the number : ");
         int num = scan.nextInt();
 
-        int j = 1;
+        int j = 0;
         for (int row = num; row >= 1; row--) {
             for (int col = 1; col <= (num - row) + num; col++) {
                 if (row <= col) {
-                    System.out.print(j + "");
                     if (col > num) {
                         j = j - 1;
                     } else {
                         j = j + 1;
                     }
+                    System.out.print(j + " ");
                 } else {
-                    System.out.print("_");
+                    System.out.print("  ");
                 }
             }
             System.out.println();
