@@ -21,12 +21,10 @@ class AverageOfArray {
         }
 
         int sum = 0;
-        int count = 0;
         for (int i = 0; i < size; i++) {
             sum += arr[i];
-            count = count + 1;
         }
-        int averageOfNumber = sum / count;
+        int averageOfNumber = sum / size;
         System.out.print("\nAverage of array is : " + averageOfNumber);
 
         scan.close();
