@@ -4,25 +4,27 @@ class SecondLargestElement {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int arr[] = { 1, 2, 1, 3, 3, 4, 1, 7, 7, 15, 20, 25, 100 };
+        int arr[] = { 100, 25, 200, 105, 75, 92, 118, 225, 1500 };
         int size = arr.length;
 
-        int largestElement = 0;
-        int secondLargestElement = 0;
-        if (arr[0] > arr[1]) {
-            largestElement = arr[0];
-        } else {
-            secondLargestElement = arr[1];
-        }
-
-        for (int i = 2; i < size; i++) {
-            if (arr[i] > largestElement) {
-                secondLargestElement = largestElement;
-                largestElement = arr[i];
+        int isLargestElement = arr[0];
+        int largestElementIndex = 0;
+        for (int i = 0; i < size; i++) {
+            if (isLargestElement < arr[i]) {
+                isLargestElement = arr[i];
+                largestElementIndex = i;
             }
         }
 
-        System.out.print("Second largest element is : " + secondLargestElement);
+        arr[largestElementIndex] = 0;
+        int isSecondLargestElement = arr[0];
+        for (int i = 0; i < size; i++) {
+            if (isSecondLargestElement < arr[i]) {
+                isSecondLargestElement = arr[i];
+            }
+        }
+
+        System.out.print("Second largest element is : " + isSecondLargestElement);
         scan.close();
     }
 }
