@@ -23,7 +23,7 @@ class MergeTwoArrayRemoveDuplicateElement {
             System.out.print(arr3[i] + ", ");
         }
 
-        for (int i = 0; i < size3; i++) {
+        for (int i = 0; i < size3 - 1; i++) {
             for (int j = i + 1; j < size3; j++) {
                 if (arr3[i] == arr3[j]) {
                     arr3[j] = arr3[size3 - 1];
