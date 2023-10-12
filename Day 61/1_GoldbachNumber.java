@@ -25,13 +25,13 @@ class GoldbachNumber {
             }
         }
 
-        int size = arr.length;
+        int size = index;
         for (int j = 0; j < size; j++) {
             System.out.print(arr[j] + ", ");
         }
 
-        loop: for (int i = 0; i < size; i++) {
-            for (int j = 0; j < arr.length; j++) {
+        loop: for (int i = 0; i < size - 1; i++) {
+            for (int j = i + 1; j < size; j++) {
                 if (arr[i] + arr[j] == num) {
                     System.out.print("\n" + num + " is a GoldbachNumber");
                     break loop;
