@@ -11,7 +11,7 @@ class BinarySearch {
             if (arr[mid] == key) {
                 isFound = true;
                 break;
-            } else if (arr[mid] > key) {
+            } else if (arr[mid] < key) {
                 low = mid + 1;
             } else {
                 high = mid - 1;
