@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// A number is said to be a Goldbach number, if the number can be expressed as the addition of two odd prime number pairs.
 class GoldbachNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
