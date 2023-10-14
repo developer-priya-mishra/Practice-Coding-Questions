@@ -17,10 +17,11 @@ class DecimalToBinary {
             index += 1;
         }
 
-        System.out.print("Binary number is ");
+        int binaryNumber = 0;
         for (int i = index - 1; i >= 0; i--) {
-            System.out.print(arr[i]);
+            binaryNumber = binaryNumber * 10 + arr[i];
         }
+        System.out.print("Binary number is " + binaryNumber);
 
         scan.close();
     }
