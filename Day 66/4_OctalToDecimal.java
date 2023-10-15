@@ -13,14 +13,18 @@ class OctalToDecimal {
             int remainder = num % 10;
             if (remainder == 8 || remainder == 9) {
                 System.out.println("Invalid octal number");
+                decimalNumber = -1;
                 break loop;
             } else {
                 decimalNumber += remainder * Math.pow(8, power);
                 power += 1;
                 num = num / 10;
             }
+
         }
-        System.out.print("Decimal number is " + decimalNumber);
+        if (decimalNumber != -1) {
+            System.out.print("Decimal number is " + decimalNumber);
+        }
 
         scan.close();
     }
