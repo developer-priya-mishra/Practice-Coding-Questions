@@ -1,53 +1,53 @@
 import java.util.Scanner;
 
-class DecimalToHexadecimal {
+class DecimalToHexadecimal1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the decimal number : ");
-        int num = scan.nextInt();
+        int decimalNumber = scan.nextInt();
 
         int reverseHexadecimalNumber[] = new int[100];
         int index = 0;
-        while (num != 0) {
-            int remainder = num % 16;
+        while (decimalNumber != 0) {
+            int remainder = decimalNumber % 16;
             reverseHexadecimalNumber[index] = remainder;
-            num = num / 16;
+            decimalNumber = decimalNumber / 16;
             index += 1;
         }
 
-        String hexaNumber = "";
+        String hexadecimalNumber = "";
         for (int i = index - 1; i >= 0; i--) {
             switch (reverseHexadecimalNumber[i]) {
                 case 10:
-                    hexaNumber += "A";
+                    hexadecimalNumber += "A";
                     break;
 
                 case 11:
-                    hexaNumber += "B";
+                    hexadecimalNumber += "B";
                     break;
 
                 case 12:
-                    hexaNumber += "C";
+                    hexadecimalNumber += "C";
                     break;
 
                 case 13:
-                    hexaNumber += "D";
+                    hexadecimalNumber += "D";
                     break;
 
                 case 14:
-                    hexaNumber += "E";
+                    hexadecimalNumber += "E";
                     break;
 
                 case 15:
-                    hexaNumber += "F";
+                    hexadecimalNumber += "F";
                     break;
                 default:
-                    hexaNumber += reverseHexadecimalNumber[i];
+                    hexadecimalNumber += reverseHexadecimalNumber[i];
                     break;
             }
         }
-        System.out.println("Hexadecimal number is : " + hexaNumber);
+        System.out.println("Hexadecimal number is : " + hexadecimalNumber);
 
         scan.close();
     }
@@ -58,48 +58,60 @@ class DecimalToHexadecimal2 {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the decimal number : ");
-        int num = scan.nextInt();
+        int decimalNumber = scan.nextInt();
 
-        StringBuilder hexadecimal = new StringBuilder();
+        StringBuilder hexadecimalNumber = new StringBuilder();
 
-        while (num != 0) {
-            int remainder = num % 16;
-            char hexaNumber = '\0';
+        while (decimalNumber != 0) {
+            int remainder = decimalNumber % 16;
+
+            char asciiChar = '\0';
 
             switch (remainder) {
                 case 10:
-                    hexaNumber = 'A';
+                    asciiChar = 'A';
                     break;
 
                 case 11:
-                    hexaNumber = 'B';
+                    asciiChar = 'B';
                     break;
 
                 case 12:
-                    hexaNumber = 'C';
+                    asciiChar = 'C';
                     break;
 
                 case 13:
-                    hexaNumber = 'D';
+                    asciiChar = 'D';
                     break;
 
                 case 14:
-                    hexaNumber = 'E';
+                    asciiChar = 'E';
                     break;
 
                 case 15:
-                    hexaNumber = 'F';
+                    asciiChar = 'F';
                     break;
                 default:
-                    hexaNumber = (char) remainder;
+                    asciiChar = (char) (remainder + 48);
                     break;
             }
-            hexadecimal.insert(0, hexaNumber);
-            num = num / 16;
+            hexadecimalNumber.insert(0, asciiChar);
+            decimalNumber = decimalNumber / 16;
         }
+        System.out.println("Hexadecimal number is : " + hexadecimalNumber);
+        scan.close();
+    }
+}
 
-        System.out.println("Hexadecimal number is : " + hexadecimal);
+class DecimalToHexadecimal3 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
+        System.out.print("Enter the decimal number : ");
+        int decimalNumber = scan.nextInt();
+
+        String hexadecimalNumber = Integer.toHexString(decimalNumber);
+        System.out.println("Hexadecimal number is : " + hexadecimalNumber.toUpperCase());
         scan.close();
     }
 }
