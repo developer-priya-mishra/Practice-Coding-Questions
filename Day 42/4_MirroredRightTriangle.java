@@ -10,9 +10,9 @@ class MirroredRightTriangle {
         for (int row = num; row >= 1; row--) {
             for (int col = 1; col <= num; col++) {
                 if (col >= row) {
-                    System.out.print("* ");
+                    System.out.print("*");
                 } else {
-                    System.out.print("  ");
+                    System.out.print(" ");
                 }
             }
             System.out.println();
@@ -20,3 +20,4 @@ class MirroredRightTriangle {
         scan.close();
     }
 }
+
